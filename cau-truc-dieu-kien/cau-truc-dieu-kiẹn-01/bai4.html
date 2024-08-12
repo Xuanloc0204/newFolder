@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="num1">
+<input type="number" id="num2">
+<input type="number" id="num3">
+<button onclick="timsolonnhat()">Ket qua</button>
+<script>
+    function timsolonnhat() {
+        let a = document.getElementById("num1").value;
+        let b = document.getElementById("num2").value;
+        let c = document.getElementById("num3").value;
+        if (a>b) {
+            if (a>c) {
+                document.getElementById("hienthi").innerHTML=a+" la so lon nhat"
+            } else {
+                document.getElementById("hienthi").innerHTML=c+" la so lon nhat"
+
+            }
+        } else if (a<b){
+            if (b>c) {
+                document.getElementById("hienthi").innerHTML=b+" la so lon nhat"
+
+            } else {
+                document.getElementById("hienthi").innerHTML=c+" la so lon nhat"
+
+
+            }
+        }
+    }
+</script>
+<p id="hienthi"></p>
+
+</body>
+</html>

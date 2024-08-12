@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhap tuoi cua hoc sinh:</p>
+<input type="number" id="a">
+<button onclick="kiemtratuoihs()">Kiem tra</button>
+<script>
+    function kiemtratuoihs() {
+        let a = document.getElementById("a").value
+        if (a<16) {
+            document.getElementById("hienthi").innerText= "hoc sinh khong du dieu kien vao hoc lop 10"
+        } else {
+            document.getElementById("hienthi").innerText= "hoc sinh du dieu kien vao hoc lop 10"
+
+        }
+    }
+</script>
+<p>Ket qua</p>
+<p id="hienthi"></p>
+</body>
+</html>

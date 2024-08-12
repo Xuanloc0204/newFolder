@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Chuyển từ độ C sang độ F</h3>
+<input type="number" id="num">
+<select id="c">
+    <option>Độ C</option>
+    <option>Độ F</option>
+</select>
+<select id="f">
+    <option>Độ C</option>
+    <option>Độ F</option>
+</select>
+<button onclick="chuyendoi()">Chuyển đổi</button>
+<script>
+    function chuyendoi() {
+        let a = document.getElementById("num").value
+        let c = document.getElementById("c").value;
+        let f = document.getElementById("f").value;
+        let ressul;
+        if (c === 'Độ C' && f === 'Độ F') {
+            ressul = a * 9 / 5 + 23;
+        } else if (c == "Độ F" && f == 'Độ C') {
+            ressul = a - 32 / (9 / 5);
+        } else if (c == "Độ C" && f == 'Độ C') {
+            ressul = a;
+        } else {
+            ressul = a;
+        }
+        document.getElementById("hienthi").innerHTML = ressul
+    }
+
+</script>
+<p id="hienthi"></p>
+</body>
+</html>

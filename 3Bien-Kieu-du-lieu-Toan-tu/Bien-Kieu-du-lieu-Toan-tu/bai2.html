@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="C" value="">
+<button onclick="Fahrenheit()">Nhap</button>
+
+<script>
+    function Fahrenheit(c) {
+        c = document.getElementById('C').value;
+        let F = (c / 5 * 9 + 32);
+        document.getElementById('result').innerHTML = '<strong>' + F + '</strong>';
+    }
+</script>
+<div id="result"></div>
+
+
+</body>
+</html>
