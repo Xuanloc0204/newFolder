@@ -5,6 +5,25 @@
     <title>Title</title>
 </head>
 <body>
+<p>
+    5% nếu tổng doanh số nhỏ hơn hoặc bằng 100 triệu.<br>
 
+    10% nếu tổng doanh số nhỏ hơn hoặc bằng 300 triệu.<br>
+
+    20 % nếu tổng doanh số là lớn hơn 300 triệu.<br>
+</p>
+<script>
+    let doanhso = +prompt("Nhap doanh so ban hang:");
+    let hoahong = 0;
+    if (doanhso < 1000) {
+        hoahong = doanhso * 0.05;
+    } else if (doanhso < 3000) {
+        hoahong = doanhso * 0.1;
+    } else if (doanhso > 3000) {
+        hoahong = doanhso * 0.2;
+    }
+    alert("so tien hoa hong la" + hoahong);
+
+</script>
 </body>
 </html>

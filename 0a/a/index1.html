@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+<p>
+    <input type="text" id="num1">
+    x<sup>2</sup>+
+    <input type="text" id="num2">
+    x+
+    <input type="text" id="num3">
+    <button onclick="timX()">Ket qua</button>
+</p>
+<p id="hienthi"></p>
+<script>
+    function timX() {
+        let a = +document.getElementById("num1").value;
+        let b = +document.getElementById("num2").value;
+        let c = +document.getElementById("num3").value;
+        let d = b * b - 4 * a * c;
+        let x1,x2;
+        if (a==0 && b==0) {
+            document.getElementById("hienthi").innerHTML="phuong trinh vo so nghiem"
+        } else if (a!=0 && b!=0) {
+            if (d<0){
+                document.getElementById("hienthi").innerHTML="phuong trinh vo nghiem"
+            } else if (d==0) {
+                x1= -b/(2*a);
+                x2 =x1;
+                document.getElementById("hienthi").innerHTML= "phuong trinh co nghiem kep<br> x1 = x2 = "+ x1.toFixed(2);
+            } else if (d>0) {
+                x1= (-b + Math.sqrt(d))/(2*a);
+                x2= (-b - Math.sqrt(d))/(2*a);
+                document.getElementById("hienthi").innerHTML= "phuong trinh co nghiem <br> x1 = " + x1.toFixed(2) + "<br> x2 = "+ x2.toFixed(2);
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

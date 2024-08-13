@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Phí thuê bao bắt buộc là 25 nghìn.<br>
+
+    600 đồng cho mỗi gọi của 50 phút đầu tiên.<br>
+
+    400 đồng cho mỗi phút gọi của 150 phút tiếp theo.<br>
+
+    200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.<br>
+</p>
+<input type="number" id="num">
+<input type="button" value="tinh cuoc" onclick="tinhcuoc()">
+<script>
+    function tinhcuoc() {
+        let a = document.getElementById("num").value;
+        let cuocdienthoai=0;
+        if (a< 50) {
+            cuocdienthoai = a*600 + 25;
+        } else if (a<150){
+            cuocdienthoai = a*400 +25;
+        } else if (a<200){
+            cuocdienthoai = a*200 +25;
+        }
+        document.getElementById("hienthi").innerHTML="cuoc dien thoai cua 1 gia dinh la: " + cuocdienthoai;
+
+    }
+</script>
+<p id="hienthi"></p>
+</body>
+</html>

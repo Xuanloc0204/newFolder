@@ -5,14 +5,24 @@
     <title>Title</title>
 </head>
 <body>
-<script src="my.js">
-    // let x = +prompt("nhap so tien gui:");
-    // let y = +prompt("nhap so thang gui:");
-    // let tienlai = x*(5/100)*(y/12);
-    // let sum =tienlai + x;
-    // document.write(sum);
+<input type="number" id="num">
+<button onclick="tinhPhiVanChuyen()">Tinh</button>
+<p>Ket qua</p>
+<p id="hienthi"></p>
+<script>
+    function tinhPhiVanChuyen() {
+        let a = document.getElementById("num").value;
+        let phiVanChuyen = 0;
+        if (a <= 5) {
+            phiVanChuyen = a * 50000;
+        } else if (a <= 10) {
+            phiVanChuyen = a * 100000;
+        } else if (a > 10) {
+            phiVanChuyen = a * 200000;
+        }
+        document.getElementById("hienthi").innerHTML = "Phi van chuyen cua " + a + "kg la: " + phiVanChuyen + "VND";
 
-
+    }
 </script>
 </body>
 </html>
