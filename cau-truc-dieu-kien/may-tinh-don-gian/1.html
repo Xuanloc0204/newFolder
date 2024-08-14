@@ -12,29 +12,30 @@ button {
 <body>
 <table>
 <input type="text" id="a" >
+    <p id="b"></p>
     <tr>
-        <td><button value="1" onclick="oninput()">1</button></td>
-        <td><button>2</button></td>
-        <td><button>3</button></td>
-        <td><button>+</button></td>
+        <td><button value="1" onclick="inputValue(this.value)">1</button></td>
+        <td><button value="2" onclick="inputValue(this.value)">2</button></td>
+        <td><button value="3" onclick="inputValue(this.value)">3</button></td>
+        <td><button value="+" onclick="inputValue(this.value)">+</button></td>
     </tr>
     <tr>
-        <td><button>4</button></td>
-        <td><button>5</button></td>
-        <td><button>6</button></td>
-        <td><button>-</button></td>
+        <td><button value="4" onclick="inputValue(this.value)">4</button></td>
+        <td><button value="5" onclick="inputValue(this.value)">5</button></td>
+        <td><button value="6" onclick="inputValue(this.value)">6</button></td>
+        <td><button value="-" onclick="inputValue(this.value)">-</button></td>
     </tr>
     <tr>
-        <td><button>7</button></td>
-        <td><button>8</button></td>
-        <td><button>9</button></td>
-        <td><button>x</button></td>
+        <td><button value="7" onclick="inputValue(this.value)">7</button></td>
+        <td><button value="8" onclick="inputValue(this.value)">8</button></td>
+        <td><button value="9" onclick="inputValue(this.value)">9</button></td>
+        <td><button value="*" onclick="inputValue(this.value)">x</button></td>
     </tr>
     <tr>
-        <td><button>C</button></td>
-        <td><button>0</button></td>
-        <td><button>=</button></td>
-        <td><button>/</button></td>
+        <td><button onclick="xoa()">C</button></td>
+        <td><button onclick="inputValue(this.value)">0</button></td>
+        <td><button onclick="result()">=</button></td>
+        <td><button value="/" onclick="inputValue(this.value)">/</button></td>
     </tr>
 </table>
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Thu Nhap" id="num">
+<button onclick="tinhthue()">Tinh</button>
+<p id="hienthi"></p>
+<script>
+    function tinhthue() {
+        let a = +document.getElementById("num").value;
+        let thue = 0;
+        if (a<= 5){
+            thue = a * 0.05;
+        } else if (a<10) {
+            thue = a* 0.1;
+        } else if (a<18) {
+            thue = a*0.15;
+        } else if (a<32) {
+            thue = a*0.2;
+        } else if (a<52) {
+            thue = a*0.25;
+        } else if (a<80) {
+            thue = a*0.3;
+        } else {
+            thue =a*0.35;
+        }
+        document.getElementById("hienthi").innerHTML= `thue thu nhap ca nhan la: ${thue}Tr`
+    }
+</script>
+
+</body>
+</html>

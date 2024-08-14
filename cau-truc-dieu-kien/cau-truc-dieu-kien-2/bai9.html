@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap a" id="num1">
+<input type="text" placeholder="Nhap b" id="num2">
+<input type="text" placeholder="Nhap c" id="num3">
+<button onclick="check()">Kiem Tra</button>
+<p id="hienthi"></p>
+
+<script>
+    function check() {
+        let a = +document.getElementById("num1").value;
+        let b = +document.getElementById("num2").value;
+        let c = +document.getElementById("num3").value;
+        if (a<=0||b<=0||c<=0) {
+            document.getElementById("hienthi").innerHTML=  `${a},${b},${c} khong la canh cua tam giac`;
+        } else {
+            if (a+b>c && a+c>b && b+c>a){
+                document.getElementById("hienthi").innerHTML=  `${a},${b},${c} la canh cua tam giac`;
+            } else {
+                document.getElementById("hienthi").innerHTML=  `${a},${b},${c} khong la canh cua tam giac`;
+
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

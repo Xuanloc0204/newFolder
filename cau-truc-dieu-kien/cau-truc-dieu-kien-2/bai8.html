@@ -5,6 +5,21 @@
     <title>Title</title>
 </head>
 <body>
+<input type="text" placeholder="Nhap tuoi" id="num">
+<button onclick="checktuoi()">Kiem tra</button>
+<p id="hienthi"></p>
+<script>
+    function checktuoi() {
+        let a = +document.getElementById("num").value;
+        if (a > 0 && a < 120) {
+            document.getElementById("hienthi").innerHTML=a+" la tuoi cua 1 nguoi";
+        } else {
+            document.getElementById("hienthi").innerHTML=a+" khong la tuoi cua 1 nguoi";
+
+        }
+    }
+
+</script>
 
 </body>
 </html>

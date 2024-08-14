@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap gia dien" id="num">
+<button onclick="tinhtiendien()">Tinh</button>
+<p id="hienthi"></p>
+
+<script>
+    function tinhtiendien() {
+        let a = +document.getElementById("num").value;
+        let tiendien = 0;
+        if (a <= 50) {
+            tiendien = a * 1806;
+        } else if (a <= 100) {
+            tiendien = a * 1866;
+        } else if (a < 200) {
+            tiendien = a * 2167;
+        } else if (a <= 300) {
+            tiendien = a * 2729;
+        } else if (a <= 400) {
+            tiendien = a * 3050;
+        } else {
+            tiendien = a * 3151;
+        }
+        document.getElementById("hienthi").innerHTML = `Tong hoa don tien dien la: ${tiendien} Vnd`;
+    }
+</script>
+
+</body>
+</html>
