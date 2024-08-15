@@ -5,16 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-<h3>Bảng cưu chương</h3>
+<h1>Bảng cửu chương</h1>
+<table border="1" id="a"></table>
 <script>
-    let tabel= ""
+    let tabel= "";
     for (let i = 1; i < 10; i++) {
+        tabel += "<tr>"
         for (let j = 1; j < 10; j++) {
-            tabel = i + "*" + j + "=" + i * j;
-            document.write(tabel + "<br>");
+            tabel +=`<td>${i} * ${j} = ${i*j} </td>`
         }
-
+        tabel += "</tr>"
     }
+    document.getElementById("a").innerHTML= tabel
 
 </script>
 </body>

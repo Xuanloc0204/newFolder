@@ -16,15 +16,11 @@
         if (a <= 50) {
             tiendien = a * 1806;
         } else if (a <= 100) {
-            tiendien = a * 1866;
-        } else if (a < 200) {
-            tiendien = a * 2167;
+            tiendien = 50 * 1806 + (a-50)*1866;
+        } else if (a <= 200) {
+            tiendien = 50 * 1806 + 50*1866 + (a-100) * 2167;
         } else if (a <= 300) {
-            tiendien = a * 2729;
-        } else if (a <= 400) {
-            tiendien = a * 3050;
-        } else {
-            tiendien = a * 3151;
+            tiendien = 50 * 1806 + 50*1866 + 100 * 2167 + (a-200) * 2729;
         }
         document.getElementById("hienthi").innerHTML = `Tong hoa don tien dien la: ${tiendien} Vnd`;
     }
