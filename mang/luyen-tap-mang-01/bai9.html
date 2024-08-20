@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let a= [];
+    let b= [];
+
+    // khởi tạo/nhâp vào mảng số nguyên
+    function taoMang(arr, b) {
+        for (let i = 0; i < 5; i++) {
+            let a = +prompt(`nhâp phần tử thứ ${i} mảng ${b}`);
+            arr.push(a);
+        }
+        console.log(arr);
+    }
+taoMang(a,"a");
+taoMang(b,"b");
+
+    let c= b.concat(a);
+    console.log(c);
+</script>
+</body>
+</html>

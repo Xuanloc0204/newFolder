@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="hienthi"></div>
+<script>
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+
+    function stars(a, b) {
+        let stars = prompt("Nhap ten ngoi sao")
+        let resul = "Không tìm thấy sao"
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] === stars) {
+                resul = b[i];
+            }
+        }
+        document.getElementById("hienthi").innerHTML = resul;
+    }
+
+    stars(arr1, arr2)
+</script>
+</body>
+</html>

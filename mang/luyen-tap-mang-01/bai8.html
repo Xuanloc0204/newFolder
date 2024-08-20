@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // khởi tạo/nhâp vào mảng số nguyên
+    let arr = [];
+    for (let i = 0; i < 5; i++) {
+        let a = +prompt("nhâp so");
+        arr.push(a);
+    }
+    console.log(arr);
+
+    // Sắp xếp theo thứ tự giảm dần
+    let n = arr.length;
+    for (let i = n; i >= 0; i--) {
+        for (let j = 0; j < n - 1; j++) {
+            if (arr[j] < arr[j + 1]) {
+                let tem = arr[j];
+                arr[j] = arr[j+1]
+                arr[j + 1] = tem;
+            }
+        }
+    }
+    console.log(arr);
+</script>
+</body>
+</html>

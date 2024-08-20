@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // Khai báo và khởi tạo mảng
+    let a = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+    ];
+    // Lặp qua từng hàng trong mảng
+    for (let i = 0; i < a.length; i++) {
+        // Xuất chỉ mục hàng hiện tại
+        console.log("row " + i);
+
+        //Lặp lại qua từng phần tử trong hàng hiện tại
+        for (let j = 0; j < a[i].length; j++) {
+            // Xuất giá trị phần tử hiện tại
+            console.log(" " + a[i][j]);
+        }
+    }
+</script>
+
+</body>
+</html>

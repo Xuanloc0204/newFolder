@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhap so");
+    let arr = [1, 2, 3, 4, 11, 21, 45, -10];
+    let b;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === a) {
+            b = i;
+        }
+    }
+    if (b >= 0) {
+        document.write(a + " co vi tri thu " + b + " trong mang");
+    } else {
+        alert(a + " khong co trong mang");
+    }
+
+
+</script>
+
+</body>
+</html>

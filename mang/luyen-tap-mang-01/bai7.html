@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 5; i++) {
+        let num = prompt("Nhap phan tu arr");
+        if (isNaN(num)) {
+            num = +prompt("Nhap lai phan tu arr");
+            i--;
+        } else {
+            arr.push(num);
+        }
+    }
+    let V = +prompt("Nhap so can xoa");
+    for (let i = 0; i < arr.length; i++) {
+        if (V == arr[i]) {
+            arr.splice(i, 1);
+            break;
+        }
+    }
+    // Mảng mới sau khi xóa
+    document.write(arr);
+
+</script>
+</body>
+</html>

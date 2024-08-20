@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Nhắc người dùng nhập dữ liệu và lưu vào biến 'num'
+    var num = window.prompt();
+
+    // Chuyển số thành chuỗi và lưu nó vào biến 'str'
+    var str = num.toString();
+
+    // Khởi tạo một mảng 'kết quả' với ký tự đầu tiên của chuỗi
+    var result = [str[0]];
+
+    // Lặp qua các ký tự của chuỗi bắt đầu từ chỉ mục 1
+    for (var x = 1; x < str.length; x++) {
+    // Kiểm tra xem ký tự trước và ký tự hiện tại có phải là chữ số chẵn không
+        if (str[x - 1] % 2 === 0 && str[x] % 2 === 0) {
+            // Nếu cả hai đều chẵn, hãy đẩy '-' và ký tự hiện tại vào mảng 'kết quả'
+            result.push('-', str[x]);
+        } else {
+            // Nếu cả hai không đều, đẩy ký tự hiện tại vào mảng 'kết quả'
+            result.push(str[x]);
+        }
+    }
+
+    // Xuất mảng 'kết quả' đã nối dưới dạng chuỗi
+    console.log(result.join(''));
+
+</script>
+
+</body>
+</html>

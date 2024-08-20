@@ -5,6 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-<script src="my.js"></script>
+<!--<script src="my.js"></script>-->
+<script>
+    let number = +prompt("nhap so")
+    let arr = [1, 2, 4, 6, 7, 10, 1];
+    let count = 0;
+    arr.forEach((value, index) => {
+        if (value === number) {
+            count++;
+        }
+    })
+    document.write(`${number} xuat hien ${count} lan`)
+
+</script>
 </body>
 </html>

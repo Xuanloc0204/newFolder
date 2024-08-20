@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Khai báo và khởi tạo chuỗi đầu vào
+    let str = prompt("nhập vào");
+
+    // Định nghĩa các hằng số cho chữ hoa và chữ thường
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+
+    // Khởi tạo một mảng để lưu trữ kết quả
+    let result = [];
+
+    // Lặp qua từng ký tự trong chuỗi đầu vào
+    for (let x = 0; x < str.length; x++) {
+        // Kiểm tra ký tự hiện tại có phải là chữ hoa không
+        if (UPPER.indexOf(str[x]) !== -1) {
+            // Chuyển chữ hoa thành chữ thường và thêm nó vào mảng kết quả
+            result.push(str[x].toLowerCase());
+        }
+        // Kiểm tra xem ký tự hiện tại có phải là chữ thường không
+        else if (LOWER.indexOf(str[x]) !== -1) {
+            // Chuyển chữ thường thành chữ hoa và thêm nó vào mảng kết quả
+            result.push(str[x].toUpperCase());
+        }
+        // Nếu ký tự hiện tại không phải là chữ hoa hay chữ thường, hãy thêm nó vào mảng kết quả như cũ
+        else {
+            result.push(str[x]);
+        }
+    }
+
+    // Xuất mảng kết quả đã nối dưới dạng chuỗi
+    console.log(result.join(''));
+
+</script>
+</body>
+</html>

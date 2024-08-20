@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1,-5,34,29,0,8,55,-66,98,9];
+    let sum = 0 ;
+    let max = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        sum +=arr[i];
+        if (max < arr[i]){
+            max = arr[i];
+        }
+    }
+    let tb = sum/arr.length;
+    document.write(`Phần tử có giá trị lớn nhất trong mảng là: ${max} <br>`)
+    document.write(`Giá trị trung bình của các phần tử trong mảng là: ${tb}`)
+
+</script>
+
+</body>
+</html>

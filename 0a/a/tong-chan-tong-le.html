@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1, 4, 2, -5, 7, 15, 27, 34, 52];
+    let num = +prompt("Nhap so");
+    let count = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (num === arr[i]) {
+            count = i;
+        }
+    }
+    if (count>0){
+        console.log(count);
+    } else {
+        console.log("-1");
+    }
+
+</script>
+</body>
+</html>

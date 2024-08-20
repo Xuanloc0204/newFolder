@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhập từ" id="str">
+<button onclick="dictionary()">Dịch</button>
+<p>Kết quả</p>
+<p id="hienthi"></p>
+<script>
+    function dictionary() {
+        let english = ["banana", "apple", "orange", "pen", "pencil", "book"];
+        let vietnamese = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+        let str = document.getElementById("str").value;
+        let resul = "Không tìm thấy";
+        for (let i = 0; i < english.length; i++) {
+            if (str === english[i]) {
+                resul = vietnamese[i];
+
+            } else if (str === vietnamese[i]) {
+                resul = english[i]
+            }
+        }
+        document.getElementById("hienthi").innerHTML = resul
+    }
+
+
+</script>
+</body>
+</html>

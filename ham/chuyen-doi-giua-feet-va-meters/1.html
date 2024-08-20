@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function footToMeter(foot){
+        let meters = 0.305 * foot;
+        document.write(`${foot} foot = ${meters} meters <br>`);
+    }
+    function meterToFoot(meter){
+        let foot = 3.279 * meter;
+        document.write(`${meter} meter = ${foot} foot<br>`)
+    }
+
+    let feet = +prompt("nhap feet");
+    let meters = +prompt("nhap meters");
+
+    console.log(footToMeter(feet));
+    console.log(meterToFoot(meters))
+</script>
+
+</body>
+</html>
