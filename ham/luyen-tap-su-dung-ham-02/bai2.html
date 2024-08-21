@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let r = +prompt("Nhâp bán kính của hình tròn");
+
+    function dientich(r) {
+        let S = Math.PI * Math.pow(r, 2);
+        return S;
+    }
+
+    function chuvi(r) {
+        let C = 2 * Math.PI * r;
+        return C;
+    }
+
+    let dienTich1 = dientich(r);
+    let chuVi1 = chuvi(r);
+    document.write(`diện tích hình tròn là: ${dienTich1} <br>`);
+    document.write(`chu vi hình tròn là: ${chuVi1}`);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" placeholder="Nhập Vào" id="key">
+<button onclick="stars()">Tìm Kiếm</button>
+<p>Kết Quả:</p>
+<p id="resul"></p>
+
+<script>
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+
+    function indexOf(arr, key) {
+        for (let i = 0; i < arr.length; i++) {
+            if (key == arr[i]) {
+                return i;
+            }
+        }
+        return i = -1;
+    }
+
+    function stars() {
+        let key = document.getElementById("key").value;
+        let index = indexOf(arr1, key);
+        if(index !== -1){
+            document.getElementById("resul").innerHTML= arr2[index];
+        } else {
+            document.getElementById("resul").innerHTML = "Không tìm thấy"
+        }
+    }
+</script>
+</body>
+</html>

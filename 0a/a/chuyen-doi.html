@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhập vào" id="num">
+<select id="from">
+    <option value="feet">Feet</option>
+    <option value="meet">Meet</option>
+</select>
+<select id="to">
+    <option value="meet">Meet</option>
+    <option value="feet">Feet</option>
+</select>
+<button onclick="convert()">Convert</button>
+<p id="result"></p>
+
+<script>
+
+    function convert() {
+        let input = +document.getElementById("num").value;
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        let result
+
+        if (from == "feet" && to == "meet") {
+            result = input * 0.305;
+        } else if (from == "meet" && to == "feet") {
+            result = input * 3.279;
+        } else {
+            result = input;
+        }
+        document.getElementById("result").innerHTML = result
+    }
+
+</script>
+</body>
+</html>

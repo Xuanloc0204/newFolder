@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let a = +prompt("Nhập số");
 
+    function tinhBinhPhuong(a) {
+        let binhPhuong = Math.pow(a, 2);
+        return binhPhuong;
+    }
+    let x = tinhBinhPhuong(a);
+    document.write(`Bình phuương của ${a} là: ${x}`);
+
+</script>
 </body>
 </html>
