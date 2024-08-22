@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+   let hinhTron = function (radius) {
+       this.radius= radius;
+
+       this.getRadius= function () {
+           return radius;
+       }
+       this.getDientich = function () {
+           return Math.PI*radius*radius;
+       }
+   }
+   let HinhTron = new hinhTron(4);
+   let radius = HinhTron.getRadius();
+   let dienTich = HinhTron.getDientich();
+   alert("Hình Tròn: Bán kính " + radius+"; Diện tích : "+ dienTich);
+   //
+
+
+   let HinhCn =function (a,b) {
+       this.chieudai = a;
+       this.chieurong = b;
+
+       this.getChieudai = function () {
+           return a;
+       }
+       this.getChieurong = function () {
+           return b;
+       }
+
+       this.getDientich =function () {
+           return a*b;
+       }
+   };
+   let hinhcn = new HinhCn(3,5);
+   let chieudai = hinhcn.getChieudai();
+   let chieurong = hinhcn.getChieurong();
+   let Dientich = hinhcn.getDientich();
+   alert("Hình Chữ Nhật: Chiều dài " + chieudai + ", Chiều rộng " + chieurong + ", Diện tích " + Dientich);
+
+</script>
+
+</body>
+</html>

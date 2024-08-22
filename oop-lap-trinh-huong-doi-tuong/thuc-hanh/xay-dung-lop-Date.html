@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    //xay dung lop MyDate voi 3 tham so truyen vao
+    let MyDate = function (day,moth, year){
+        this.day =day;
+        this.moth =moth;
+        this.year = year;
+
+        // phuong thuc tra ve
+        this.getDay= function (){
+            return this.day;
+        }
+        this.getMoth = function (){
+            return this.moth;
+        }
+        this.getYear = function (){
+            return this.year;
+        }
+
+        //phuong thuc dat lai
+        this.setDay = function (day){
+            this.day = day;
+        }
+        this.setMoth = function (moth){
+            this.moth = moth;
+        }
+        this.setYear = function (year){
+            this.year = year;
+        }
+    };
+
+    // tao doi tuong ngay 2-2-2007
+    let date =new MyDate(2,2,2007);
+
+    //goi phuong thuc de thay doi ngay/thang/nam
+    date.setDay(10);
+    date.setMoth(10);
+    date.setYear(2010);
+
+    //truy cap phuong thuc cua lop date
+    let day =date.getDay();//2
+    let moth= date.getMoth();//2
+    let year = date.getYear();//2007
+
+    //hien thi ngay thang nam
+    alert(day + "/"+moth+"/"+year);
+
+
+</script>
+
+</body>
+</html>
