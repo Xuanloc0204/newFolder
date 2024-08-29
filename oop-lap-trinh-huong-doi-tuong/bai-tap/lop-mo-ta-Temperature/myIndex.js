@@ -1,6 +1,9 @@
-let temperature = new Temperature(25);
-let my_fahrenheit = temperature.getChuyendoF();
-let my_kelvins = temperature.getChuyendoK();
+let chuyendoi = new Temperature(25);
 
-document.write("Nhiệt độ K: " + my_kelvins + "<br>"
-    + "Nhiệt độ F: " + my_fahrenheit)
+chuyendoi.setChuyendoC(100);
+
+let doF = chuyendoi.getChuyendoF();
+let doK = chuyendoi.getChuyendoK();
+
+document.write("Nhiệt độ K: " + doK + "<br>"
+    + "Nhiệt độ F: " + doF)

@@ -16,5 +16,8 @@ class Temperature {
     getChuyendoK(){
         return this.doC + 273.15;
     }
-    
+    setChuyendoC(doC){
+        this.doC = doC;
+
+    }
 }

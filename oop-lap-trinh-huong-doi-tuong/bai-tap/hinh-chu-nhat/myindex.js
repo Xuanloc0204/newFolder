@@ -1,4 +1,4 @@
-let HCN = new hinhCn(90, 50);
+let HCN = new HinhChuNhat(90, 50);
 
 HCN.setChieudai(200);
 HCN.setChieurong(10);
